@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika:wght@300..700&display=swap');
+
+:root{
+    --ff: "Lato", serif;
+    --cl-1: white;
+    --cl-2:#00D6B4;
+    --cl-3: #999999;
+    --bg:#222222;
+    --ff-1:"Open Sans", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    max-width: 940px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+
+
+
+
+/* =======================================header qismi================================================== */
+header{
+    background-image: url(../img/IMAGE.png);
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 60px;
+    }
+    nav .logo h1{
+        color: var(--cl-1);
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        font-family: var(--ff);
+    }
+    nav ul{
+        display: flex;
+        li a{
+            color: var(--cl-3);
+            margin: 0 20px;
+            font-family: var(--ff);
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 1px;
+        }
+        li a:hover{
+            color: var(--cl-2);
+        }
+    }
+}
+header .header_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+   
+    h2{
+        font-family: var(--ff);
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 53px;
+        text-align: center;
+        max-width: 465px;
+        color: var(--cl-1);
+    }
+    button{
+        width: 137px;
+        height: 39px;
+        color: var(--cl-2);
+        border: 1px solid var(--cl-2);
+        background-color: #00d6b200;
+        margin: 29px 0;
+        border-radius: 10px;
+    }
+    button:hover{
+        background-color: var(--cl-2);
+        color:var(--cl-1);
+        border: 1px solid var(--cl-1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* ===========================================main qismi================================================ */
+main{
+    background-color: var(--bg);
+    min-height: 932px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .main_title{
+        text-align: center;
+        margin: 30px 0;
+    }
+    .main_title h2{
+        font-family: var(--ff);
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 30px; 
+        color: var(--cl-1);
+    }
+
+    .main_grid{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        gap: 20px 20px;
+    }
+    .main_grid .box img{
+        width: 100%;
+        height: auto;
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================footer qismi=========================================== */
+footer{
+    background-color: var(--bg);
+    justify-content: center;
+    min-height: 122px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        font-family: var(--ff);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px; 
+        color: #C2C2C2;    
+    }
+    p{
+        font-family: var(--ff-1);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #999999;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:768px){
+
+
+    
+    main{
+        .main_grid{
+            grid-template-columns: 1fr 1fr;
+            .span{
+                display: none;
+            }
+        }
+       
+    }
+    
+}
+
+
+@media screen and (max-width:425px){
+
+    header{
+        background-position: center;
+        background-size: cover;
+        nav{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+    main{
+        .main_grid{
+            grid-template-columns: 1fr;
+            .span{
+                display: block;
+            }
+        }
+    }
+    
+}
+
